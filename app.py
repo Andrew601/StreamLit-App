@@ -24,15 +24,15 @@ def calculate_busting_probability(deck, total):
 def main():
     st.title("Blackjack Probability Calculator")
 
+    # Input for the number of decks
+    num_decks_options = [1, 2, 3]
+    num_decks = st.selectbox("Select the number of decks you're playing with:", num_decks_options)
+
     # Input for the first card
     first_card = st.slider("Select the value of your first card:", 2, 11)
 
     # Input for the second card
     second_card = st.slider("Select the value of your second card:", 2, 11)
-
-    # Input for the number of decks
-    num_decks_options = [1, 2, 3]
-    num_decks = st.selectbox("Select the number of decks you're playing with:", num_decks_options)
 
     # Input for the number of cards dealt to other players
     num_other_cards_options = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
@@ -48,7 +48,7 @@ def main():
 
     # Input for other players' cards
     for i in range(num_cards_dealt):
-        card_value = st.slider(f"Select the value of {i+1} card dealt to other players:", 2, 11, key=f"slider_{i}", color='blue')
+        card_value = st.slider(f"Select the value of {i+1} card dealt to other players:", 2, 11, key=f"slider_{i}")
         deck.remove(card_value)
 
     # Calculate probabilities
