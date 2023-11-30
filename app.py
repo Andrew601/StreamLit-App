@@ -35,7 +35,7 @@ def main():
     second_card = st.slider("Select the value of your second card:", 2, 11)
 
     # Input for the number of cards dealt to other players
-    num_other_cards_options = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+    num_other_cards_options = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
     num_cards_dealt = st.selectbox("Number of cards dealt to other players:", num_other_cards_options)
 
     # Create a deck based on the number of decks
