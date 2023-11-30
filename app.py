@@ -2,7 +2,6 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
 
 def calculate_probabilities(deck, num_decks):
     # All possible card values in blackjack, including 'A'
